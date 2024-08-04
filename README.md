@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# E-Commerce
+### Created a Responsive E-Commerce App using React js and Redux 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### The App has Dashboard page ,view product page and cart section
+#### Implemented data fetching form the Api using thunk Middleware and useEffect to get the data and display it on Dashboard page
+#### The Dashboard page displays the Prodcut which has a search Product feature as well
+#### From the Dashboard page the according to user action they will be navigated to the respective pages
+#### In Cart section user can increase,Decrease, Delete the count of the Product in the cart and can See the Total value of Products in the cart change 
 
-## Available Scripts
+### Tech Stack used :
+ ##### HTML
+  ##### CSS
+ ##### Javascript
+  ##### React 
+   ##### Redux 
 
-In the project directory, you can run:
+### Libraries used:
+##### Bootstrap (Styling)
+##### React router (Routing)
+##### Redux toolkit (Global state management)
 
-### `npm start`
+### Technical Concepts used:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### Css
+##### Flex box  and Grid Container for Layout design 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+##### Media Queries for Responsiveness for smaller screens
 
-### `npm test`
+#### Javascript
+##### Array methods like map,filter,find,push
+##### Object methods
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+#### React 
+#####  hooks like UseState,useEffect and React Router hooks
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Redux
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#####  hooks like useDispatch,useSelector,
+#####  Redux Thunk Middleware for fetching data from the api 
+ 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+               
