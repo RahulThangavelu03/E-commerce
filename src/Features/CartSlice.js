@@ -1,5 +1,34 @@
 import { CreateStotre, createSlice } from "@reduxjs/toolkit"
 import { SiTaketwointeractivesoftware } from "react-icons/si"
+import { ToastContainer, toast, Bounce } from 'react-toastify';
+
+const SuccessToast = () =>
+    toast.success('Product has been added to the cart!', {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+    });
+
+const WarningToast = () =>
+    toast.warn('Product is already in the cart!', {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+    });
+
+
 
 
 const initialState = {
@@ -7,6 +36,7 @@ const initialState = {
     total: 0
 
 }
+
 
 const CartSlice = createSlice({
     name: "cart",
@@ -36,6 +66,8 @@ const CartSlice = createSlice({
                 console.log(state.total, "state.total-addcart")
                 state.total = Math.floor(state.total * 100) / 100
 
+                SuccessToast()
+
 
             }
 
@@ -52,7 +84,7 @@ const CartSlice = createSlice({
                 state.total += state.cart[Index].price
                 state.total = Math.floor(state.total * 100) / 100
 
-
+                WarningToast()
 
             }
         },

@@ -6,6 +6,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { addToCart } from "../Features/CartSlice.js";
 import { GetProducts } from "../Features/ProductSlice.js";
 import { BsCart2 } from "react-icons/bs";
+import { ToastContainer, toast, Bounce } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Dashboard() {
     const dispatch = useDispatch();
@@ -16,6 +18,12 @@ function Dashboard() {
     const [products, setProducts] = useState([]);
     const [search, setSearch] = useState('');
     const cartItems = useSelector(state => state.cart.cart);
+
+
+
+
+
+
 
     useEffect(() => {
         if (productStatus === 'idle') {
@@ -46,6 +54,7 @@ function Dashboard() {
 
     function handleClick(product) {
         dispatch(addToCart(product));
+
     }
 
     function viewDetails(product) {
@@ -116,6 +125,20 @@ function Dashboard() {
                         </div>
                     ))
                 )}
+
+                <ToastContainer
+                    position="top-center"
+                    autoClose={3000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    theme="light"
+                    transition={Bounce} />
+
             </div>
         </div>
     );

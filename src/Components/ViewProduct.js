@@ -4,6 +4,15 @@ import { useNavigate } from "react-router-dom"
 import { addToCart } from "../Features/CartSlice"
 import { useDispatch } from "react-redux"
 import { useSelector } from "react-redux"
+import { ToastContainer, toast, Bounce } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
+
+
+
+
+
 const ViewProduct = () => {
 
 
@@ -13,6 +22,20 @@ const ViewProduct = () => {
     const Navigate = useNavigate()
     const Dispacth = useDispatch()
     const cart = useSelector(state => state.cart.cart)
+
+
+    const WarningToast = () =>
+        toast.warn(` ${Product.title}is already in the cart`, {
+            position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            transition: Bounce,
+        });
 
 
 
@@ -26,12 +49,14 @@ const ViewProduct = () => {
 
         if (!cart.find(i => i.id == Product.id)) {
             Dispacth(addToCart(Product))
-            alert(`${Product.title} Product has been added to the Cart`)
+
+
 
         }
 
         else {
-            alert("Product is already in the Cart")
+            WarningToast()
+
         }
 
     }
@@ -63,6 +88,19 @@ const ViewProduct = () => {
             <button class="btn btn-color btn-sm" style={{ font: "bold", color: "white" }} onClick={GoToDashboard}>Go back</button>{' '}
             <button class="btn btn-color btn-sm" style={{ font: "bold", color: "white" }} onClick={(e) => AddtoCart(Product)}>Add to cart</button>
 
+
+            <ToastContainer
+                position="top-center"
+                autoClose={3000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"
+                transition={Bounce} />
         </div>
     )
 }
